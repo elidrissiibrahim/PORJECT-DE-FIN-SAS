@@ -1,4 +1,4 @@
-let prompt = require ('prompt-sync')();
+let prompt = require('prompt-sync')();
 const candidats = [
     {
         cin: "AA184725",
@@ -6,10 +6,10 @@ const candidats = [
         prenom: "Ayoub",
         partiPolitique: "Rassemblement National des Indépendants",
         age: 42,
-        electeurs: []
+        electeurs: ["yrufjf","yryfhjfj"]
     },
     {
-        cin: "BB295816",
+        cin: "Vm19610",
         nom: "Ait Lahcen",
         prenom: "Salma",
         partiPolitique: "Rassemblement National des Indépendants",
@@ -180,25 +180,57 @@ function AjouterunNouveauCandidat() {
     NVcandidat.age = prompt("entre votre AGE :");
     candidats.push(NVcandidat);
 }
-function Ajouterplusieurscandidatsalafois()
-{
+function Ajouterplusieurscandidatsalafois() {
     let nombercandudat = +prompt("entre le nomber des candidats :")
-    for(let i = 1 ; i <= nombercandudat ; i++)
-    {
-        console.log("===================== Candidat"+ i +"========================")
+    for (let i = 1; i <= nombercandudat; i++) {
+        console.log("===================== Candidat" + i + "========================")
         AjouterunNouveauCandidat()
     }
 }
-function Afficherlalistedescandidats()
-{
-/*console.log("cin\t\tnom\t\tprenom\t\tage\t\tpartipolitique")
-console.log("===\t\t===\t\t=======\t\t===\t\t=============")
-    for (let i = 0 ; i < candidats.length ; i++)
-    {
-        console.log(candidats[i].cin,"\t",candidats[i].nom,"\t",candidats[i].prenom,"\t\t",candidats[i].age,"\t\t",candidats[i].partiPolitique
-        )
-    }*/
-   console.table(candidats)
-   // Identifiant, nom, prénom, Parti politique, Âge
+function Afficherlalistedescandidats() {
+    /*console.log("cin\t\tnom\t\tprenom\t\tage\t\tpartipolitique")
+    console.log("===\t\t===\t\t=======\t\t===\t\t=============")
+        for (let i = 0 ; i < candidats.length ; i++)
+        {
+            console.log(candidats[i].cin,"\t",candidats[i].nom,"\t",candidats[i].prenom,"\t\t",candidats[i].age,"\t\t",candidats[i].partiPolitique
+            )
+        }*/
+    console.table(candidats)
+    // Identifiant, nom, prénom, Parti politique, Âge
 }
-Afficherlalistedescandidats();
+// function Voterpouruncandidat() {
+//     let dejavoter = false;
+//     lelecteurCIN = prompt("votre CIN :");
+//     for (let i = 0; i < candidats.length; i++) {
+//         for (let j = 0; j < candidats[i].electeurs.length; j++) {
+//             if (lelecteurCIN == candidats[i].electeurs[j]) {
+//                 dejavoter = true;
+//                 break;
+//             }
+
+//         } if (dejavoter)
+//             break;
+
+//     }
+//     if(dejavoter)
+//         console.log("tu as deja voter !!!");
+//     if (!(dejavoter))
+//     {
+//          let votersur = prompt("enter le CIN de candidat : ");
+//          let exist = false;
+//          for(let i = 0; i < candidats.length ; i++)
+//          {
+//             if (votersur == candidats[i].cin)
+//                 exist = true;
+//             break;
+//          }
+//          if(exist)
+//             candidats[i].electeurs.push(lelecteurCIN)
+// console.log(candidats)
+//     }
+// }
+//4. Voter pour un candidat :
+//Demander à l’électeur de saisir sa propre CIN.
+//Vérifier si l’électeur a le droit de voter (si sa CIN n’existe dans aucune des listes de votes d’un candidat)
+//Demander l'identifiant ou la CIN du candidat, puis ajouter la CIN de l’électeur à la liste des votes du candidat.
+Afficherlalistedescandidats()
