@@ -268,11 +268,11 @@ function AjouterunNouveauCandidat() {
     }
     if (exist == false) {
         console.log("==============================================")
-        console.log(NVcandidat.cin, "entre les autre informations  ")
+        console.log( "Bonjour[",NVcandidat.cin,"] entre les autre informations  ")
         console.log("==============================================")
         NVcandidat.nom = prompt("- entre votre NOM :");
         NVcandidat.prenom = prompt("- entre votre PRENOM :");
-        NVcandidat.partiPolitique = prompt("- entre votre PARTIPOLITIAUE et [0] :");
+        NVcandidat.partiPolitique = prompt("- entre votre PARTIPOLITIAUE et [0] is Indépendant :");
         if(NVcandidat.partiPolitique == '0')
             NVcandidat.partiPolitique="Indépendant"; 
         NVcandidat.age = + prompt("- entre votre AGE :");
