@@ -4,7 +4,7 @@ let candidats = [
         cin: "VM19610",
         nom: "El Idrissi",
         prenom: "IBRAHIM",
-        partiPolitique: "R.N.I",
+        partiPolitique: "RNI",
         age: 22,
         electeurs: [
             "AB123456"
@@ -14,22 +14,21 @@ let candidats = [
         cin: "Vm19611",
         nom: "Ait Lahcen",
         prenom: "Salma",
-        partiPolitique: "R.N.I",
+        partiPolitique: "RNI",
         age: 34,
         electeurs: [
             "QR123654", "ST456789", "UV987321", "WX654987",
-            "YZ321654", "AB456789"
+            "YZ321654"
         ]
     },
     {
         cin: "CC376924",
         nom: "Bennani",
         prenom: "Othmane",
-        partiPolitique: "R.N.I",
+        partiPolitique: "RNI",
         age: 51,
         electeurs: [
             "EF654987", "GH321654", "IJ789456", "KL456123",
-            "MN987654",
         ]
     },
 
@@ -37,7 +36,7 @@ let candidats = [
         cin: "DD487315",
         nom: "Amrani",
         prenom: "Imane",
-        partiPolitique: "P.A.M",
+        partiPolitique: "PAM",
         age: 29,
         electeurs: [
             "QR654321", "ST789123", "UV456987"
@@ -47,18 +46,17 @@ let candidats = [
         cin: "EE518637",
         nom: "Tazi",
         prenom: "Youssef",
-        partiPolitique: "P.A.M",
+        partiPolitique: "PAM",
         age: 46,
         electeurs: [
-            "EF789321", "GH456987", "IJ123654", "KL987321",
-            "MN654789", "OP321456"
+            "EF789321", "GH456987"
         ]
     },
     {
         cin: "FF629841",
         nom: "Alaoui",
         prenom: "Hind",
-        partiPolitique: "P.A.M",
+        partiPolitique: "PAM",
         age: 37,
         electeurs: [
             "YZ987123", "AB654789"
@@ -101,7 +99,7 @@ let candidats = [
         cin: "KK164835",
         nom: "Rami",
         prenom: "Nour",
-        partiPolitique: "U.S.F.P",
+        partiPolitique: "USFP",
         age: 32,
         electeurs: [
             "OP456789", "QR123789", "ST654987", "UV321654",
@@ -112,22 +110,20 @@ let candidats = [
         cin: "LL275946",
         nom: "Chakir",
         prenom: "Anas",
-        partiPolitique: "U.S.F.P",
+        partiPolitique: "USFP",
         age: 45,
         electeurs: [
-            "CD123654", "EF987321", "GH654789", "IJ456123",
-            "KL789654", "MN321456"
+            "CD123654"
         ]
     },
     {
         cin: "MM386157",
         nom: "Tahiri",
         prenom: "Sara",
-        partiPolitique: "U.S.F.P",
+        partiPolitique: "USFP",
         age: 28,
         electeurs: [
-            "OP789321", "QR456123", "ST987654", "UV123456",
-            "WX654321", "YZ789456"
+            "OP789321", "QR456123"
         ]
     },
 
@@ -135,22 +131,20 @@ let candidats = [
         cin: "NN497268",
         nom: "Ouazzani",
         prenom: "Hamza",
-        partiPolitique: "P.P.S",
+        partiPolitique: "PPS",
         age: 36,
         electeurs: [
-            "AB456123", "CD987654", "EF321789", "GH789123",
-            "IJ654987", "KL123456", "MN456789"
+            "AB456123"
         ]
     },
     {
         cin: "PP518379",
         nom: "Bouzid",
         prenom: "Nadia",
-        partiPolitique: "P.P.S",
+        partiPolitique: "PPS",
         age: 43,
         electeurs: [
-            "OP654321", "QR987456", "ST123789", "UV456123",
-            "WX789654", "YZ321456"
+            "OP654321"
         ]
     },
 
@@ -158,31 +152,30 @@ let candidats = [
         cin: "QQ629481",
         nom: "Mansouri",
         prenom: "Karim",
-        partiPolitique: "M.P",
+        partiPolitique: "MP",
         age: 48,
         electeurs: [
             "AB789654", "CD321456", "EF654123", "GH987321",
-            "IJ456789", "KL123987", "MN789456"
+            "MN789456"
         ]
     },
     {
         cin: "RR731592",
         nom: "Sebti",
         prenom: "Ikram",
-        partiPolitique: "M.P",
+        partiPolitique: "MP",
         age: 31,
         electeurs: [
             "OP321654", "QR654789", "ST987123", "UV456789",
-            "WX123456", "YZ654987"
         ]
     },
 
-    // Candidats indépendants : aucun électeur
+    // Candidats indépendants : aucun electeur
     {
         cin: "SS842613",
         nom: "El Mansouri",
         prenom: "Reda",
-        partiPolitique: "Indépendant",
+        partiPolitique: "Independant",
         age: 33,
         electeurs: []
     },
@@ -190,7 +183,7 @@ let candidats = [
         cin: "TT953724",
         nom: "Bennacer",
         prenom: "Aya",
-        partiPolitique: "Indépendant",
+        partiPolitique: "Independant",
         age: 27,
         electeurs: []
     },
@@ -198,7 +191,7 @@ let candidats = [
         cin: "UU164835",
         nom: "Lahlou",
         prenom: "Omar",
-        partiPolitique: "Indépendant",
+        partiPolitique: "Independant",
         age: 40,
         electeurs: []
     },
@@ -206,7 +199,7 @@ let candidats = [
         cin: "VV275946",
         nom: "Naciri",
         prenom: "Sara",
-        partiPolitique: "Indépendant",
+        partiPolitique: "Independant",
         age: 35,
         electeurs: []
     }];
@@ -252,8 +245,11 @@ function listprincipal() {
             case 8:
                 Statistiquesdelelection()
                 break;
+            case 0:
+                break;
             default:
-                console.log("choix invalid !!");
+                console.log("========= choix invalid !! ============");
+                break;
         }
     }
     while (choix != 0);
@@ -328,14 +324,14 @@ function Afficherlalistedescandidats() {
 
     function trieparlapartiepolique() {
         console.log("les partie plitique qui ont dans la list :");
-        console.log("R.N.I");
-        console.log("P.A.M");
+        console.log("RNI");
+        console.log("PAM");
         console.log("Istiqlal");
-        console.log("U.S.F.P");
-        console.log("P.P.S");
-        console.log("M.P");
-        console.log("Indépendant");
-        let choix = prompt("enter le nom de partie politique :")
+        console.log("USFP");
+        console.log("PPS");
+        console.log("MP");
+        console.log("Independant");
+        let choix = prompt("enter le nom de partie politique :").toUpperCase()
 
         let newlist = [];
         for (let i = 0; i < candidats.length; i++) {
@@ -363,6 +359,7 @@ function Afficherlalistedescandidats() {
                 cin: candidats[i].cin,
                 nom: candidats[i].nom,
                 prenom: candidats[i].prenom,
+                age: candidats[i].age,
                 partiPolitique: candidats[i].partiPolitique,
                 votes: candidats[i].electeurs.length
             }
@@ -398,7 +395,7 @@ function Voterpouruncandidat() {
         }
         if (exist) {
             candidats[indexcandidat].electeurs.push(lelecteurCIN)
-            console.log("votre vote enregistre");
+            console.log("===== votre vote enregistre ========");
         }
         else {
             console.log("============ candidat introvable ===============");
@@ -425,11 +422,12 @@ function Supprimeruncandidat() {
         }
     }
     candidats = clean;
+    console.log("=== le candidat a ete supprmer avec succe ===");
 
 }
 function Modifierlesinformationsduncandidat() {
     let verfcandidat = false;
-    let cin = prompt("enter votre CIN pour modifie tes information :");
+    let cin = prompt("===> enter votre CIN pour modifie tes information :");
     let candidatindex = null;
 
     for (let i = 0; i < candidats.length; i++) {
@@ -440,15 +438,15 @@ function Modifierlesinformationsduncandidat() {
         break;
     }
     if (verfcandidat) {
-        console.log("modifie les information de ", cin);
-        candidats[candidatindex].age = prompt("modifie votre age :")
-        candidats[candidatindex].partiPolitique = prompt("entre votre novelle partie plotique :")
+        console.log("modifie les information [", cin, "]");
+        candidats[candidatindex].age = +prompt("==> modifie votre age :")
+        candidats[candidatindex].partiPolitique = prompt("==> entre votre novelle partie plotique :")
         candidats[candidatindex].electeurs.length = 0;
 
 
     }
     else
-        console.log("tu pas dans les listes !")
+        console.log("======= ! tu pas dans les listes ! ========")
 }
 function Rechercherdescandidats() {
     inliste = false;
@@ -465,31 +463,42 @@ function Rechercherdescandidats() {
         console.table(nomlist)
     }
     else
-        console.log("pas de candidat avec ce nom ")
+        console.log("====== pas de candidat avec ce [", nom, "]")
 
 }
 function Statistiquesdelelection() {
     console.log("[1]- Afficher le nombre total de candidats")
-    console.log("[2]- Afficher le Top 3 des candidats ")
-    console.log("[3]- Afficher le nombre de candidats par parti politique")
-    //Afficher le nombre total de votes exprimés dans toute l'élection.
-    //Afficher le Top 3 des candidats ayant le plus de votes.
-    //Afficher le nombre de candidats par parti politique
+    console.log("[2]- Afficher le nombre total de votes exprimés dans toute l'élection")
+    console.log("[3]- Afficher le Top 3 des candidats ")
+    console.log("[4]- Afficher le nombre de candidats par parti politique")
+
     let choix = +prompt("entre une choix : ")
     switch (choix) {
         case 1:
-            nombretotaldevotes()
+            Afficherlenombretotaldecandidats()
             break;
         case 2:
-            Top3descandidats()
+            Afficherlenombretotaldevotesexprimesdanstoutelelection();
             break;
         case 3:
+            Top3descandidats()
+            break;
+        case 4:
             nombredecandidatsparpartipolitique();
             break;
+        default:
+            console.log("========== choix invalide !! ========");
 
     }
+    function Afficherlenombretotaldecandidats() {
+        let conteur = 0;
+        for (let i = 0; i < candidats.length; i++) {
+            conteur++;
+        }
+        console.log("=====total des candidats est [", conteur, "]")
+    }
 
-    function nombretotaldevotes() {
+    function Afficherlenombretotaldevotesexprimesdanstoutelelection() {
         let votetotale = 0;
         for (let i = 0; i < candidats.length; i++) {
             {
