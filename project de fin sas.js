@@ -1,5 +1,5 @@
 let prompt = require('prompt-sync')();
-const candidats = [
+let candidats = [
     {
         cin: "VM19610",
         nom: "El Idrissi",
@@ -240,6 +240,18 @@ function listprincipal() {
             case 4:
                 Voterpouruncandidat()
                 break;
+            case 5:
+                Modifierlesinformationsduncandidat()
+                break;
+            case 6:
+                Supprimeruncandidat()
+                break;
+            case 7:
+                Rechercherdescandidats()
+                break;
+            case 8:
+                Statistiquesdelelection()
+                break;
             default:
                 console.log("choix invalid !!");
         }
@@ -315,6 +327,23 @@ function Afficherlalistedescandidats() {
     }
 
     function trieparlapartiepolique() {
+        console.log("les partie plitique qui ont dans la list :");
+        console.log("R.N.I");
+        console.log("P.A.M");
+        console.log("Istiqlal");
+        console.log("U.S.F.P");
+        console.log("P.P.S");
+        console.log("M.P");
+        console.log("Indépendant");
+        let choix = prompt("enter le nom de partie politique :")
+
+        let newlist = [];
+        for (let i = 0; i < candidats.length; i++) {
+            if (candidats[i].partiPolitique == choix) {
+                newlist.push(candidats[i]);
+            }
+        }
+        console.table(newlist)
 
     }
 
@@ -376,5 +405,129 @@ function Voterpouruncandidat() {
             AjouterunNouveauCandidat()
         }
     }
+}
+function Supprimeruncandidat() {
+    let inliste = false;
+    let cin = prompt("enter le cin de candidat pour le suprime : ");
+    let clean = [];
+    indexcandidat = null;
+    for (let i = 0; i < candidats.length; i++) {
+        if (candidats[i].cin == cin) {
+            inliste = true;
+            candidatindex = i;
+            break;
+        }
+    }
+    if (inliste) {
+        for (let i = 0; i < candidats.length; i++) {
+            if (i != candidatindex)
+                clean.push(candidats[i])
+        }
+    }
+    candidats = clean;
+
+}
+function Modifierlesinformationsduncandidat() {
+    let verfcandidat = false;
+    let cin = prompt("enter votre CIN pour modifie tes information :");
+    let candidatindex = null;
+
+    for (let i = 0; i < candidats.length; i++) {
+        if (candidats[i].cin == cin) {
+            verfcandidat = true;
+            candidatindex = i;
+        }
+        break;
+    }
+    if (verfcandidat) {
+        console.log("modifie les information de ", cin);
+        candidats[candidatindex].age = prompt("modifie votre age :")
+        candidats[candidatindex].partiPolitique = prompt("entre votre novelle partie plotique :")
+        candidats[candidatindex].electeurs.length = 0;
+
+
+    }
+    else
+        console.log("tu pas dans les listes !")
+}
+function Rechercherdescandidats() {
+    inliste = false;
+    nomlist = [];
+    let nom = prompt("entre votre nom :");
+    for (let i = 0; i < candidats.length; i++) {
+        if (candidats[i].nom.toLowerCase() == nom.toLowerCase()) {
+            inliste = true;
+            indexcandidat = i;
+            nomlist.push(candidats[i])
+        }
+    }
+    if (inliste) {
+        console.table(nomlist)
+    }
+    else
+        console.log("pas de candidat avec ce nom ")
+
+}
+function Statistiquesdelelection() {
+    console.log("[1]- Afficher le nombre total de candidats")
+    console.log("[2]- Afficher le Top 3 des candidats ")
+    console.log("[3]- Afficher le nombre de candidats par parti politique")
+    //Afficher le nombre total de votes exprimés dans toute l'élection.
+    //Afficher le Top 3 des candidats ayant le plus de votes.
+    //Afficher le nombre de candidats par parti politique
+    let choix = +prompt("entre une choix : ")
+    switch (choix) {
+        case 1:
+            nombretotaldevotes()
+            break;
+        case 2:
+            Top3descandidats()
+            break;
+        case 3:
+            nombredecandidatsparpartipolitique();
+            break;
+
+    }
+
+    function nombretotaldevotes() {
+        let votetotale = 0;
+        for (let i = 0; i < candidats.length; i++) {
+            {
+                votetotale += candidats[i].electeurs.length;
+            }
+        }
+        console.log("nombers des votes est : ", votetotale, "votes");
+    }
+    function Top3descandidats() {
+        for (let i = 0; i < candidats.length; i++) {
+            for (let j = i + 1; j < candidats.length; j++) {
+                if (candidats[i].electeurs.length < candidats[j].electeurs.length) {
+                    let swap = candidats[i];
+                    candidats[i] = candidats[j];
+                    candidats[j] = swap;
+                }
+            }
+        }
+        for (let top = 0; top < 3; top++) {
+            console.log(`======> top ${top + 1} est le candidat ${candidats[top].nom} ${candidats[top].prenom} de CIN : ${candidats[top].cin} dans ${candidats[top].partiPolitique} avec [${candidats[top].electeurs.length}] votes `)
+        }
+
+    }
+    function nombredecandidatsparpartipolitique() {
+        let number = 0;
+        let compteur = {};
+        for (let i = 0; i < candidats.length; i++) {
+            let parti = candidats[i].partiPolitique;
+            if (compteur[parti]) {
+                compteur[parti]++;
+            }
+            else {
+                compteur[parti] = 1;
+            }
+
+        }
+        console.table(compteur)
+    }
+
 }
 listprincipal();
