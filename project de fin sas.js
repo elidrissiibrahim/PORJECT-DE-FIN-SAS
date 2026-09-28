@@ -335,7 +335,7 @@ function Afficherlalistedescandidats() {
 
         let newlist = [];
         for (let i = 0; i < candidats.length; i++) {
-            if (candidats[i].partiPolitique == choix) {
+            if (candidats[i].partiPolitique.toUpperCase() == choix) {
                 newlist.push(candidats[i]);
             }
         }
@@ -390,8 +390,11 @@ function Voterpouruncandidat() {
         let indexcandidat = null;
         for (let i = 0; i < candidats.length; i++) {
             if (votersur == candidats[i].cin)
+            {
                 exist = true;
             indexcandidat = i;
+            break;
+            }
         }
         if (exist) {
             candidats[indexcandidat].electeurs.push(lelecteurCIN)
@@ -434,14 +437,14 @@ function Modifierlesinformationsduncandidat() {
         if (candidats[i].cin == cin) {
             verfcandidat = true;
             candidatindex = i;
+            break;
         }
-        break;
+
     }
     if (verfcandidat) {
         console.log("modifie les information [", cin, "]");
         candidats[candidatindex].age = +prompt("==> modifie votre age :")
         candidats[candidatindex].partiPolitique = prompt("==> entre votre novelle partie plotique :")
-        candidats[candidatindex].electeurs.length = 0;
 
 
     }
