@@ -389,11 +389,10 @@ function Voterpouruncandidat() {
         let exist = false;
         let indexcandidat = null;
         for (let i = 0; i < candidats.length; i++) {
-            if (votersur == candidats[i].cin)
-            {
+            if (votersur == candidats[i].cin) {
                 exist = true;
-            indexcandidat = i;
-            break;
+                indexcandidat = i;
+                break;
             }
         }
         if (exist) {
@@ -521,13 +520,13 @@ function Statistiquesdelelection() {
             }
         }
         for (let top = 0; top < 3; top++) {
-            console.log(`======> top ${top + 1} est le candidat ${candidats[top].nom} ${candidats[top].prenom} de CIN : ${candidats[top].cin} dans ${candidats[top].partiPolitique} avec [${candidats[top].electeurs.length}] votes `)
+            console.log(`======> top [${top + 1}] est le candidat = ${candidats[top].nom} ${candidats[top].prenom}= de CIN : [${candidats[top].cin}] dans ${candidats[top].partiPolitique} avec [${candidats[top].electeurs.length}] votes `)
         }
 
     }
     function nombredecandidatsparpartipolitique() {
         let number = 0;
-        let compteur = {};
+        let compteur = [];
         for (let i = 0; i < candidats.length; i++) {
             let parti = candidats[i].partiPolitique;
             if (compteur[parti]) {
